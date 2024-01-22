@@ -7,3 +7,6 @@ fetch(process.argv[2] , {
 .then(responmse => {
     console.log(`Code: ${responmse.status}`);
 })
+.catch(error => {
+    console.error('Error:', error);
+});
