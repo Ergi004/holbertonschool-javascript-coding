@@ -1,9 +1,6 @@
 #!/usr/bin/node
 /*eslint-disable*/
 const fs = require('fs');
-function writeMe(filePath, content) {
-  fs.writeFile(filePath, content, 'utf8', (err, data) => {
+fs.writeFile(process.argv[2], process.argv[3], 'utf8', (err) => {
     if (err) throw err;
-    console.log(data);
-  });
-}
+});
