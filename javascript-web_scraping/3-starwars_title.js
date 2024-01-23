@@ -3,7 +3,7 @@
 const request = require('request');
 const process = require('process');
 
-const link ='https://swapi-api.hbtn.io/api/films/:id' + process.argv[2];
+const link ='https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 request(link, (error, response, body) => {
   if (error) {
