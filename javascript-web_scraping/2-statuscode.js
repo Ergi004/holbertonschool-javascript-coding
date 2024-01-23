@@ -1,12 +1,12 @@
 #!/usr/bin/node
 /*eslint-disable*/
-fetch(process.argv[2] , {
-    method: 'GET',
-})
+const request = require('request');
+const process = require('process');
 
-.then(responmse => {
-    console.log(`Code: ${responmse.status}`);
-})
-.catch(error => {
-    console.error('Error:', error);
+const link = process.argv[2];
+
+request
+  .get(link)
+  .on('response', function (response) {
+  console.log('code: ' + response.statusCode);
 });
