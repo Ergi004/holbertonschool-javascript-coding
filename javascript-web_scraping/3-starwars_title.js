@@ -3,7 +3,7 @@
 const request = require('request');
 const process = require('process');
 
-const link ='https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+const link = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 request(link, (error, response, body) => {
   if (error) {
@@ -11,7 +11,7 @@ request(link, (error, response, body) => {
   } else if (response.statusCode !== 200) {
     console.error(`Response code: ${response.statusCode}`);
   } else {
-  const results = JSON.parse(body);
-  console.log(results.title);
+    const results = JSON.parse(body);
+    console.log(results.title);
   }
 });
